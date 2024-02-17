@@ -1,0 +1,11 @@
+{
+  "name": "web-audit-module-ecoindex",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "ecoindex": "^1.0.5",
+    "ecoindex_puppeteer": "^1.0.0-rc3",
+    "web_audit": "^5.0.0-rc3"
+  }
+}
