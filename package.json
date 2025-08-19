@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "ecoindex": "^2.0.0",
+    "ecoindex": "^2.0.1",
     "ecoindex_puppeteer": "^1.0.0-rc3",
     "web_audit": "^5.0.0-rc3"
   },
