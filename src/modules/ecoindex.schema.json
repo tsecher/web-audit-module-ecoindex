@@ -1,0 +1,72 @@
+{
+  "ecoindex": {
+    "label": "EcoIndex",
+    "description": "The web EcoIndex is a scoring system that measures the environmental impact of a web page",
+    "structure": {
+      "grade": {
+        "label": "EcoIndex (grade)",
+        "description": "The EcoIndex",
+        "type": "string",
+        "values": {
+          "target": "A",
+          "min_target": "A",
+          "list": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ]
+        }
+      },
+      "ecoIndex": {
+        "label": "EcoIndex",
+        "description": "The EcoIndex value.",
+        "type": "number",
+        "values": {
+          "target": 1,
+          "min_target": 0.8
+        }
+      },
+      "domSize": {
+        "label": "DOM size",
+        "description": "The DOM Size (Number of elements in DOM)",
+        "type": "number",
+        "values": {
+          "target": 600,
+          "min_target": 600
+        }
+      },
+      "nbRequest": {
+        "label": "NB requests",
+        "description": "The number of requests loaded in the page.",
+        "type": "number",
+        "values": {
+          "target": 40,
+          "min_target": 40
+        }
+      },
+      "responsesSize": {
+        "label": "Response size",
+        "description": "The size (KB) of all cumulated responses.",
+        "type": "number",
+        "values": {
+          "target": 1024,
+          "min_target": 1024
+        }
+      },
+      "greenhouseGasesEmission": {
+        "label": "Greenhouse Gases Emission (gCO2e)",
+        "description": "The estimated Greenhouse Gases Emission (for 100 visits).",
+        "type": "number"
+      },
+      "waterConsumption": {
+        "label": "Water consumption (L)",
+        "description": "The estimated water consumption (for 100 visits).",
+        "type": "number"
+      }
+    }
+  }
+}

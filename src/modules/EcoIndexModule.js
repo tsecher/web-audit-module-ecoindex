@@ -1,8 +1,9 @@
-import {AbstractPuppeteerJourneyModule} from 'web_audit/dist/journey/AbstractPuppeteerJourneyModule.js';
-import {PuppeteerJourneyEvents} from 'web_audit/dist/journey/AbstractPuppeteerJourney.js';
-import {ModuleEvents} from 'web_audit/dist/modules/ModuleInterface.js';
+import {AbstractPuppeteerJourneyModule} from "web_audit/dist/journey/AbstractPuppeteerJourneyModule.js";
+import {PuppeteerJourneyEvents} from "web_audit/dist/journey/AbstractPuppeteerJourney.js";
+import {ModuleEvents} from "web_audit/dist/modules/ModuleInterface.js";
 import {EcoIndexStory} from "ecoindex_puppeteer";
 import * as ecoindex from 'ecoindex';
+import schema from "./ecoindex.schema.json" with {type: "json"};
 
 /**
  * EcoIndex Module events.
@@ -37,19 +38,7 @@ export default class EcoIndexModule extends AbstractPuppeteerJourneyModule {
 	async init(context) {
 		this.context = context;
 		// Install assets coverage store.
-		this.context.config.storage?.installStore('ecoindex', this.context, {
-			url: 'Url',
-			context: 'Context',
-			grade: 'Grade',
-			ecoIndex: 'Ecoindex',
-			domSize: 'Dom Size',
-			nbRequest: 'NB request',
-			responsesSize: 'Responses Size',
-			responsesSizeUncompress: 'Responses Size Uncompress',
-			waterConsumption: 'Water consumption',
-			greenhouseGasesEmission: 'Greenhouse Gases Emission',
-			nbBestPracticesToCorrect: 'Nb Best practices to correct',
-		});
+		this.context.config.storage?.installSchema(this, this.context);
 
 		// Emit.
 		this.context.eventBus.emit(EcoIndexModuleEvents.createEcoIndexModule, {module: this});
@@ -119,7 +108,7 @@ export default class EcoIndexModule extends AbstractPuppeteerJourneyModule {
 		};
 		this.context?.eventBus.emit(EcoIndexModuleEvents.onResult, eventData);
 		this.context?.config?.logger.result(`EcoIndex`, eventData.result, urlWrapper.url.toString());
-		this.context?.config?.storage?.add('ecoindex', this.context, eventData.result);
+		this.context?.config?.storage?.add(this, 'ecoindex', this.context, eventData.result);
 		this.context?.eventBus.emit(ModuleEvents.afterAnalyse, eventData);
 		this.context?.eventBus.emit(EcoIndexModuleEvents.afterAnalyse, eventData);
 	}
@@ -150,4 +139,7 @@ export default class EcoIndexModule extends AbstractPuppeteerJourneyModule {
 		};
 	}
 
+	getSchema() {
+		return schema;
+	}
 }
