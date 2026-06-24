@@ -107,7 +107,7 @@ export default class EcoIndexModule extends AbstractPuppeteerJourneyModule {
 			...this.getCleanResults(contextData)
 		};
 		this.context?.eventBus.emit(EcoIndexModuleEvents.onResult, eventData);
-		this.context?.eventBus.emit('onAnalyseSummary', {module: this, group_id:`ecoindex` , url: urlWrapper, summary: eventData.result});
+		this.context?.eventBus.emit(ModuleEvents.onAnalyseSummary, {module: this, group_id:`ecoindex` , url: urlWrapper, summary: eventData.result});
 		this.context?.config?.storage?.add(this, 'ecoindex', this.context, eventData.result);
 		this.context?.eventBus.emit(ModuleEvents.afterAnalyse, eventData);
 		this.context?.eventBus.emit(EcoIndexModuleEvents.afterAnalyse, eventData);
