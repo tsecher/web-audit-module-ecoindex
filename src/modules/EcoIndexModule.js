@@ -53,7 +53,7 @@ export default class EcoIndexModule extends AbstractPuppeteerJourneyModule {
 
 		// Init ecoindex data.
 		journey.on(PuppeteerJourneyEvents.JOURNEY_START, async (data) => this.story?.start(data.wrapper.page));
-		journey.on(PuppeteerJourneyEvents.JOURNEY_NEW_CONTEXT, async (data) => {
+		journey.on(PuppeteerJourneyEvents.JOURNEY_END_CONTEXT, async (data) => {
 			await this.story?.addStep(data.step);
 			const steps = this.story.getSteps();
 			this.contextsData[data.name] = steps[steps.length - 1];
