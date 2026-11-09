@@ -13,5 +13,5 @@
     "ecoindex_puppeteer": "^1.0.0-rc3",
     "web_audit": "https://github.com/tsecher/web-audit.git"
   },
-  "version": "2.1.0"
+  "version": "2.1.1"
 }
