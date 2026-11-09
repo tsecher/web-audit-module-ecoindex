@@ -3,11 +3,14 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
-  "keywords": ["web-audit", "ecoindex"],
+  "keywords": [
+    "web-audit",
+    "ecoindex"
+  ],
   "dependencies": {
     "ecoindex": "^2.0.1",
     "ecoindex_puppeteer": "^1.0.0-rc3",
     "web_audit": "https://github.com/tsecher/web-audit.git"
   },
-  "version": "2.0.1"
+  "version": "2.1.0"
 }
