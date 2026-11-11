@@ -14,5 +14,5 @@
     "ecoindex_reference": "^1.0.2",
     "web_audit": "https://github.com/tsecher/web-audit.git"
   },
-  "version": "2.2.0"
+  "version": "2.2.1"
 }
