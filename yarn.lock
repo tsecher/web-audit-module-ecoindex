@@ -589,10 +589,10 @@ ecoindex@^2.0.1:
   dependencies:
     ecoindex_reference "^1"
 
-ecoindex_puppeteer@^1.0.0-rc3:
-  version "1.0.0-rc3"
-  resolved "https://registry.npmjs.org/ecoindex_puppeteer/-/ecoindex_puppeteer-1.0.0-rc3.tgz"
-  integrity sha512-14C9ngOScUQBrimaEL5wLhJ7R1nsPI6ccHceL0l3cMpC4bpKVmZGKYtlCXM2l+Sdf8XA5Cz7LpllA4ZM+Wr6ig==
+ecoindex_puppeteer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ecoindex_puppeteer/-/ecoindex_puppeteer-1.0.0.tgz#5993375784f3e6aace4bb56265e7fe8a7cc2b289"
+  integrity sha512-CabOjf+iGnzRpKDt7NLizRyBNwpHqZgrgnU2dvkV5UrIuIhPT9kLfwEMr5Ak8Npowk/pieATQcme9tICVSHP2g==
   dependencies:
     convert-pro "^1.3.2"
     puppeteer-autoscroll-down "^1.1.2"
@@ -601,6 +601,11 @@ ecoindex_puppeteer@^1.0.0-rc3:
 ecoindex_reference@^1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/ecoindex_reference/-/ecoindex_reference-1.0.2.tgz"
+  integrity sha512-IKse3tu6IQfhrpGsVuxmC1K4xlc1FCZtaNYjLUj+Yxm5wthuVyS7C/miVPqSN7UZaNViUO2013ri+WJJhZfCUA==
+
+ecoindex_reference@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ecoindex_reference/-/ecoindex_reference-1.0.2.tgz#6a902841abce1498bc49ab7dbd71c65fc637092b"
   integrity sha512-IKse3tu6IQfhrpGsVuxmC1K4xlc1FCZtaNYjLUj+Yxm5wthuVyS7C/miVPqSN7UZaNViUO2013ri+WJJhZfCUA==
 
 ejs@^3.1.9:
