@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "ecoindex": "^2.0.1",
-    "ecoindex_puppeteer": "^1.0.0",
+    "ecoindex_puppeteer": "^1.0.2",
     "ecoindex_reference": "^1.0.2",
     "web_audit": "https://github.com/tsecher/web-audit.git"
   },
